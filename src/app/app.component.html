@@ -2,3 +2,36 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+<!-- To add search need to add  module. for now trying with pipe. -->
+<input type="checkbox" id="gender" name="gender" value="Male" ngModel="gender">Male
+<input type="checkbox" id="gender" name="gender" value="Female"  ngModel="gender">Female
+<input type="text" placeholder="Search from Table" ngModal="saerchText">  <br>  <br>
+<table border="1" width="100%">
+<tr>
+  <th>#</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Email</th>
+  <th>Gender</th>
+</tr> 
+<tr *ngFor = "let user of users">
+<td>{{user.id}}</td>
+<td>{{user.first_name}}</td>
+<td>{{user.last_name}}</td>
+<td>{{user.email}}</td>
+<td>{{user.gender}}</td>
+</tr>
+</table>
+<br> <br>
+
+<form>
+  <label> ID: </label> <input type="number" ngModal="id"> <br>
+  <label> First Name: </label> <input type="text" ngModal="firstName"> <br>
+  <label> Last Name: </label> <input type="text" ngModal="lastName"> <br>
+  <label> Email: </label> <input type="email" ngModal="email"> <br>
+  <label> Gender: </label> 
+      <select> <option>Male</option>
+        <option>Female</option>
+     </select> <br>
+     <input type="submit" value="Add"/>
+</form>
